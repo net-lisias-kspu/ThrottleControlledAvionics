@@ -5,6 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{06BD5A34-D2DE-413A-A815-DFC1EBEA8B5D}</ProjectGuid>
     <OutputType>Library</OutputType>
+    <BaseIntermediateOutputPath>..\..\obj\ThrottleControlledAvionics</BaseIntermediateOutputPath>
     <RootNamespace>ThrottleControlledAvionics</RootNamespace>
     <AssemblyName>ThrottleControlledAvionics</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
@@ -13,7 +14,7 @@
     <DebugSymbols>True</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>False</Optimize>
-    <OutputPath>GameData\ThrottleControlledAvionics\Plugins</OutputPath>
+    <OutputPath>..\..\bin\Debug</OutputPath>
     <DefineConstants>DEBUG;ENABLE_PROFILER;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -23,17 +24,10 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>True</Optimize>
-    <OutputPath>GameData\ThrottleControlledAvionics\Plugins</OutputPath>
+    <OutputPath>..\..\bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
-    <NoWarn>0649</NoWarn>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Nightbuild|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>GameData\ThrottleControlledAvionics\Plugins</OutputPath>
-    <WarningLevel>4</WarningLevel>
-    <DefineConstants>NIGHTBUILD</DefineConstants>
     <NoWarn>0649</NoWarn>
   </PropertyGroup>
   <ItemGroup>
@@ -41,20 +35,8 @@
       <HintPath>..\KSP-test\KSP_test_1.4.5\KSP_Data\Managed\System.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>..\KSP-test\KSP_test_1.4.5\KSP_Data\Managed\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>..\KSP-test\KSP_test_1.4.5\KSP_Data\Managed\UnityEngine.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System.Core">
       <HintPath>..\KSP-test\KSP_test_1.4.5\KSP_Data\Managed\System.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Mono.Cecil">
-      <HintPath>..\KSP-test\KSP_test_1.4.5\KSP_Data\Managed\Mono.Cecil.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mono.Security">
@@ -65,25 +47,29 @@
       <HintPath>..\KSP-test\KSP_test_1.4.5\KSP_Data\Managed\System.Xml.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\..\..\LIB\managed\1.4.1\Assembly-CSharp.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\KSP-test\KSP_test_1.4.5\KSP_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>..\KSP-test\KSP_test_1.4.5\KSP_Data\Managed\UnityEngine.Networking.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>..\KSP-test\KSP_test_1.4.5\KSP_Data\Managed\UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\..\..\LIB\managed\1.4.1\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="KSPAssets">
-      <HintPath>..\KSP-test\KSP_test_1.4.5\KSP_Data\Managed\KSPAssets.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\..\..\LIB\managed\1.4.1\KSPAssets.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\..\..\LIB\managed\1.4.1\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\..\..\..\LIB\managed\1.4.1\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>..\..\..\..\..\..\..\LIB\managed\1.4.1\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="AT_Utils">
+      <HintPath>..\..\..\..\..\..\..\LIB\plugins\AT_Utils.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyInfo.cs" />
     <Compile Include="TCAEngineInfo.cs" />
     <Compile Include="EngineWrapper.cs" />
     <Compile Include="VesselWrapper.cs" />
@@ -181,6 +167,7 @@
     <Compile Include="Modules\Orbit\Components\TargetedToOrbitExecutor.cs" />
     <Compile Include="Utils\LambertSolver2D.cs" />
     <Compile Include="Modules\Orbit\RendezvousTrajectoryOptimizers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -198,21 +185,6 @@
     <Folder Include="GUI\HUD\" />
     <Folder Include="GUI\Tabs\" />
     <Folder Include="Testing\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AT_Utils\AT_Utils.csproj">
-      <Project>{64CC36A2-0610-4F74-9F31-3D4E22866B7E}</Project>
-      <Name>AT_Utils</Name>
-      <Private>False</Private>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include=".gitignore" />
-    <None Include="ChanegLog.md" />
-    <None Include="export_git.sh" />
-    <None Include="extract_csv.sh" />
-    <None Include="make-release.sh" />
-    <None Include="README.md" />
-    <None Include="GameData\ThrottleControlledAvionics\Plugins\PluginData\ThrottleControlledAvionics\TCA.glob" />
+    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>

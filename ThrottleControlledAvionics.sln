@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThrottleControlledAvionics", "Source/ThrottleControlledAvionics/ThrottleControlledAvionics.csproj", "{06BD5A34-D2DE-413A-A815-DFC1EBEA8B5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Nightbuild|Any CPU = Nightbuild|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06BD5A34-D2DE-413A-A815-DFC1EBEA8B5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06BD5A34-D2DE-413A-A815-DFC1EBEA8B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06BD5A34-D2DE-413A-A815-DFC1EBEA8B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06BD5A34-D2DE-413A-A815-DFC1EBEA8B5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06BD5A34-D2DE-413A-A815-DFC1EBEA8B5D}.Nightbuild|Any CPU.ActiveCfg = Nightbuild|Any CPU
+		{06BD5A34-D2DE-413A-A815-DFC1EBEA8B5D}.Nightbuild|Any CPU.Build.0 = Nightbuild|Any CPU
+	EndGlobalSection
+EndGlobal
