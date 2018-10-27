@@ -1,0 +1,27 @@
+{
+	"NAME"		: "Throttle Controlled Avionics /L Unofficial",
+	"URL"		: "https://raw.githubusercontent.com/net-lisias-kspu/ThrottleControlledAvionics/master/ConfigurableContainers.version",
+	"DOWNLOAD"	: "https://github.com/net-lisias-kspu/ThrottleControlledAvionics/releases",
+	"CHANGE_LOG"	: "https://raw.githubusercontent.com/net-lisias-kspu/ThrottleControlledAvionics/master/CHANGE_LOG.md",
+	"CHANGE_LOG_URL": "https://raw.githubusercontent.com/net-lisias-kspu/ThrottleControlledAvionics/master/CHAMGES.md",
+	"VERSION":{
+		"MAJOR":3,
+		"MINOR":5,
+		"PATCH":3,
+		"BUILD":0
+		},
+	"KSP_VERSION":{
+		"MAJOR":1,
+		"MINOR":4
+		},
+	"KSP_VERSION_MIN":{
+		"MAJOR":1,
+		"MINOR":4,
+		"PATCH":1
+		},
+	"KSP_VERSION_MAX":{
+		"MAJOR":1,
+		"MINOR":4,
+		"PATCH":99
+		}
+}
